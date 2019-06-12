@@ -2,9 +2,9 @@ const path = require("path");
 const CleanWebpackPlugin = require("clean-webpack-plugin").CleanWebpackPlugin;
 
 module.exports = {
-  entry: path.resolve(__dirname, "src/hackathon-starter.tsx"),
+  entry: path.resolve(__dirname, "src/hackathon-seed.tsx"),
   output: {
-    filename: "hackathon-starter.js",
+    filename: "hackathon-seed.js",
     libraryTarget: "system",
     path: path.resolve(__dirname, "dist")
   },
