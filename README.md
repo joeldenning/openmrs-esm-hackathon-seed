@@ -4,12 +4,12 @@ A seed repo for hackathons
 ## Instructions
 - Fork and/or clone this repo
 - `npm install`
-- `npm start -- --https 8085`
+- `npm start -- --https --port 8085`
 - In a new terminal window, clone (don't fork) https://github.com/joeldenning/openmrs-esm-patient-dashboard
 - `npm install`
 - Modify dashboard-widgets.js and add the following to the `patientDashboardWidgets` array:
 a) `() => System.import('@hackathon/dashboard-widget'),`
-- `npm start -- --https 8086`
+- `npm start -- --https --port 8086`
 - Now go to https://openmrs-spa.org/openmrs/spa/login. Run the following commands in browser console:
 a) `importMapOverrides.addOverride('@hackathon/dashboard-widget', 'https://localhost:8085/hackathon-seed.js')`
 b) `importMapOverrides.addOverride('@hackathon/patient-dashboard', 'https://localhost:8086/patient-dashboard.js')`
