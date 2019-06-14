@@ -22,5 +22,5 @@ deploy:
   on:
     branch: master
 after_deploy:
-  - echo "Updating import map to point to new version of @openmrs/login"
-  - curl -u $DEPLOYER_USERNAME:$DEPLOYER_PASSWORD -d '{ "service":"@openmrs/login","url":"https://spa-modules.nyc3.digitaloceanspaces.com/login/'$TRAVIS_COMMIT'/login.js" }' -X PATCH $DEPLOYER_HOST/services\?env=prod -H "Accept:application/json" -H "Content-Type:application/json" --fail
+  - echo "Updating import map to point to new version of @hackathon/patient-search"
+  - curl -u $DEPLOYER_USERNAME:$DEPLOYER_PASSWORD -d '{ "service":"@hackathon/patient-search","url":"https://spa-modules.nyc3.digitaloceanspaces.com/login/'$TRAVIS_COMMIT'/patient-search.js" }' -X PATCH $DEPLOYER_HOST/services\?env=prod -H "Accept:application/json" -H "Content-Type:application/json" --fail
