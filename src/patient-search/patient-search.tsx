@@ -1,6 +1,6 @@
 import React from "react";
 import { doSearch } from "./patient.resource";
-import { css } from '@emotion/core'
+import { css } from "@emotion/core";
 
 export default function PatientSearch(props: PatientSearchProps) {
   const [searchTerm, setSearchTerm] = React.useState("");
@@ -32,14 +32,16 @@ export default function PatientSearch(props: PatientSearchProps) {
   }
 
   return (
-    <div css={css`
-    width: 500px;
-    margin: 76px auto 0 auto;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 10px 30px -24px #b3b3b3;
-    padding: 16px;
-    `}>
+    <div
+      css={css`
+        width: 500px;
+        margin: 76px auto 0 auto;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 10px 30px -24px #b3b3b3;
+        padding: 16px;
+      `}
+    >
       Patient Search
       <form onSubmit={handleSubmit}>
         <input
