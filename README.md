@@ -4,7 +4,7 @@ A seed repo for hackathons
 ## Instructions
 1. Install [Visual Studio Code](https://code.visualstudio.com/)
 2. Install [node and npm](https://nodejs.org/en/download/)
-3. `git clone https://github.com/joeldenning/openmrs-esm-patient-dashboard.git`
+3. `git clone https://github.com/joeldenning/openmrs-esm-patient-dashboard.git`. Github link: https://github.com/joeldenning/openmrs-esm-patient-dashboard
 4. Fork https://github.com/joeldenning/openmrs-esm-hackathon-seed. Clone your fork.
 5. `npm install` inside of both repos
 6. Inside of patient-dashboard, modify dashboard-widgets.js and add the following to the `patientDashboardWidgets` array:
