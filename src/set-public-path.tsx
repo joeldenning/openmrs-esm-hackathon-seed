@@ -2,4 +2,4 @@
 import { getPublicPath } from "@openmrs/root-config";
 
 // @ts-ignore
-__webpack_public_path__ = getPublicPath();
+__webpack_public_path__ = getPublicPath("@hackathon/seed");

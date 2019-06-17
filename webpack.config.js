@@ -16,6 +16,15 @@ module.exports = {
         }
       },
       {
+        test: /\.css$/i,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader"
+          }
+        ]
+      },
+      {
         test: /\.m?(js|ts|tsx)$/,
         exclude: /(node_modules|bower_components)/,
         use: {
