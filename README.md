@@ -11,7 +11,7 @@ A seed repo for hackathons
   `() => System.import('@openmrs/my-dashboard-widget')`. You should name your widget something besides `my-dashboard-widget`.
 7. Inside of patient-dashboard, `npm start -- --https --no-inline --port 8081`
 8. In a new terminal, run the following inside of hackathon-seed: `npm start -- --https --no-inline --port 8082`
-9. Go to https://openmrs-spa.org/openmsr/spa/login in a browser.
+9. Go to https://openmrs-spa.org/openmrs/spa/login in a browser.
 10. Now [trust all insecure localhost requests](https://superuser.com/questions/772762/how-can-i-disable-security-checks-for-localhost).
 11. Open up the browser console and run the following commands:
 ```js
