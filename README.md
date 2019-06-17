@@ -19,7 +19,7 @@ importMapOverrides.addOverride('@hackathon/patient-dashboard', 'https://localhos
 importMapOverrides.addOverride('@openmrs/my-dashboard-widget', 'https://localhost:8082/hackathon-seed.js');
 ```
 12. Refresh the page.
-13. Login with username `jdenning` and password `Ampath678`.
+13. Login with username `admin` and password `admin123`.
 14. Search for the patient called "hornblower". Click on the row in the table.
 15. You should now see a widget that says "hackathon seed is working!"
 16. Inside of hackathon-seed repo, modify the text inside of `root.component.tsx`.
