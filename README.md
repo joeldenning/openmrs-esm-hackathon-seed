@@ -7,7 +7,7 @@ A seed repo for hackathons
 3. `git clone https://github.com/joeldenning/openmrs-esm-patient-dashboard.git`. Github link: https://github.com/joeldenning/openmrs-esm-patient-dashboard
 4. Fork https://github.com/joeldenning/openmrs-esm-hackathon-seed. Clone your fork.
 5. `npm install` inside of both repos
-6. Inside of patient-dashboard, modify dashboard-widgets.js and add the following to the `patientDashboardWidgets` array:
+6. Inside of patient-dashboard, modify dashboard-widgets.tsx and add the following to the `patientDashboardWidgets` array:
   `() => System.import('@openmrs/my-dashboard-widget')`. You should name your widget something besides `my-dashboard-widget`.
 7. Inside of patient-dashboard, `npm start -- --https --no-inline --port 8081`
 8. In a new terminal, run the following inside of hackathon-seed: `npm start -- --https --no-inline --port 8082`
