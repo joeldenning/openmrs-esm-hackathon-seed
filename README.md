@@ -16,7 +16,7 @@ A seed repo for hackathons
 11. Open up the browser console and run the following commands:
 ```js
 importMapOverrides.addOverride('@hackathon/patient-dashboard', 'https://localhost:8081/patient-dashboard.js');
-importMapOverrides.addOverride('@hackathon/my-dashboard-widget', 'https://localhost:8082/hackathon-seed.js');
+importMapOverrides.addOverride('@openmrs/my-dashboard-widget', 'https://localhost:8082/hackathon-seed.js');
 ```
 12. Refresh the page.
 13. Login with username `admin` and password `admin123`.
