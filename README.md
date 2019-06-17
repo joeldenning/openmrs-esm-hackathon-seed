@@ -22,5 +22,5 @@ importMapOverrides.addOverride('@hackathon/my-dashboard-widget', 'https://localh
 13. Login with username `admin` and password `admin123`.
 14. Search for the patient called "hornblower". Click on the row in the table.
 15. You should now see a widget that says "hackathon seed is working!"
-16. Inside of hackathon-seed repo, modify the text inside of `root.component.js`.
+16. Inside of hackathon-seed repo, modify the text inside of `root.component.tsx`.
 17. In the browser, refresh the page. You should see your code modified.
