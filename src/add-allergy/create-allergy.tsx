@@ -111,7 +111,7 @@ export default function CreateAllergies(props: PatientUuidProps) {
         return response.json();
       })
       .then(function(data) {
-        window.location.reload();
+        props.addAllergy(data)
       });
     // event.currentTarget.reset();
   }
@@ -219,4 +219,5 @@ export default function CreateAllergies(props: PatientUuidProps) {
 }
 type PatientUuidProps = {
   patientUuid: string;
+  addAllergy(allergy: any): void;
 };
