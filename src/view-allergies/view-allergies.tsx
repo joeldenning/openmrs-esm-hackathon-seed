@@ -84,16 +84,22 @@ export default function ViewAllergies(props: PatientUuidProps) {
         return response;
       })
       .then(result => {
-        window.location.reload();
+        const newAllergies = allergies.filter(a => a.uuid === allergy.uuid)
+        setAllergies(newAllergies)
       });
   }
 
   function addNewAllergy() {
     return (
       <div>
-        <CreateAllergies patientUuid={props.patientUuid} />
+        <CreateAllergies patientUuid={props.patientUuid} addAllergy={addAllergy} />
       </div>
     );
+  }
+  
+  function addAllergy(allergy) {
+    const newAllergies = allergies.concat(allergy)
+    setAllergies(newAllergies)
   }
 }
 
