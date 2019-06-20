@@ -23,4 +23,4 @@ deploy:
     branch: master
 after_deploy:
   - echo "Updating import map to point to new version of @hackathon/relationships-widget"
-  - curl -u $DEPLOYER_USERNAME:$DEPLOYER_PASSWORD -d '{ "service":"@hackathon/relationships","url":"https://spa-modules.nyc3.digitaloceanspaces.com/relationships-widget/'$TRAVIS_COMMIT'/hackathon-seed.js" }' -X PATCH $DEPLOYER_HOST/services\?env=prod -H "Accept:application/json" -H "Content-Type:application/json" --fail
+  - curl -u $DEPLOYER_USERNAME:$DEPLOYER_PASSWORD -d '{ "service":"@hackathon/relationships-widget","url":"https://spa-modules.nyc3.digitaloceanspaces.com/relationships-widget/'$TRAVIS_COMMIT'/hackathon-seed.js" }' -X PATCH $DEPLOYER_HOST/services\?env=prod -H "Accept:application/json" -H "Content-Type:application/json" --fail
