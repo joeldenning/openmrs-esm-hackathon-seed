@@ -1,7 +1,16 @@
 import React from "react";
-
-export default function Root(props: RootProps) {
-  return <div className="test">Hackathon seed is working!</div>;
+import ViewAllergies from "./view-allergies/view-allergies";
+export default function AllergyWidget(props: AllergyWidgetProps) {
+  return (
+    <div className="card">
+      <div className="card-header">
+        <h5 className="card-title">Allergies</h5>
+      </div>
+      <ViewAllergies patientUuid={props.patientUuid} />
+    </div>
+  );
 }
 
-type RootProps = {};
+type AllergyWidgetProps = {
+  patientUuid: string;
+};
