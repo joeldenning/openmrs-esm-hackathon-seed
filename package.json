@@ -58,6 +58,7 @@
     "@types/react": "^16.8.19",
     "@types/react-dom": "^16.8.4",
     "react": "^16.8.6",
+    "dayjs": "^1.8.14",
     "react-dom": "^16.8.6",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",

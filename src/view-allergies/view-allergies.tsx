@@ -1,8 +1,9 @@
 import React from "react";
 import CreateAllergies from "../add-allergy/create-allergy";
+import dayjs from "dayjs";
 
 export default function ViewAllergies(props: PatientUuidProps) {
-  const [allergies, setAllergies] = React.useState(null);
+  let [allergies, setAllergies] = React.useState(null);
   const [addAllergyUI, setAddAllergyUI] = React.useState(false);
 
   React.useEffect(() => {
@@ -19,13 +20,13 @@ export default function ViewAllergies(props: PatientUuidProps) {
       });
   }, []);
 
-  return allergies ? renderValues() : renderLoader();
+  return allergies ? renderValues(allergies) : renderLoader();
 
   function renderLoader() {
     return <div>No allergies...</div>;
   }
 
-  function renderValues() {
+  function renderValues(allergies) {
     return (
       <div>
         <table className="table table-striped">
@@ -56,7 +57,7 @@ export default function ViewAllergies(props: PatientUuidProps) {
             <td>{r.reactions[0].reaction.display}</td>
             <td>{r.severity.display}</td>
             <td>{r.comment}</td>
-            <td>{r.auditInfo.dateCreated}</td>
+            <td>{dayjs(r.auditInfo.dateCreated).format("YYYY:MM:DD")}</td>
             <td>
               <button className="outlined" onClick={event => onClickDelete(r)}>
                 <i className="fa fa-trash text-danger"></i>
@@ -83,17 +84,23 @@ export default function ViewAllergies(props: PatientUuidProps) {
       .then(response => {
         return response;
       })
-      .then(result => {
-        window.location.reload();
-      });
+      .then(result => {});
   }
 
   function addNewAllergy() {
     return (
       <div>
-        <CreateAllergies patientUuid={props.patientUuid} />
+        <CreateAllergies
+          patientUuid={props.patientUuid}
+          addAllergy={addAllergy}
+        />
       </div>
     );
+  }
+
+  function addAllergy(allergy) {
+    const newAllergies = allergies.results.push(allergy);
+    setAllergies(allergies);
   }
 }
 

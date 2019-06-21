@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function CreateAllergies(props: PatientUuidProps) {
+export default function CreateAllergies(props: AddAllergyProps) {
   const [allergenType, setAllergenType] = React.useState(null);
   const [codedAllergen, setCodedAllergen] = React.useState(null);
   const [severity, setSeverity] = React.useState(null);
@@ -111,7 +111,7 @@ export default function CreateAllergies(props: PatientUuidProps) {
         return response.json();
       })
       .then(function(data) {
-        window.location.reload();
+        props.addAllergy(data);
       });
     // event.currentTarget.reset();
   }
@@ -178,7 +178,7 @@ export default function CreateAllergies(props: PatientUuidProps) {
                       type="checkbox"
                       onChange={event => setReaction(event.target.value)}
                     />
-                    <label>{result.display}</label>
+                    <label>&nbsp;&nbsp;{result.display}</label>
                   </div>
                 ))}
               </label>
@@ -198,7 +198,7 @@ export default function CreateAllergies(props: PatientUuidProps) {
             <div className="col-md-6">
               <label>
                 Saverity
-                {reactions.map(result => (
+                {severitys.map(result => (
                   <div>
                     <input
                       name="severity"
@@ -206,7 +206,7 @@ export default function CreateAllergies(props: PatientUuidProps) {
                       type="radio"
                       onChange={event => setSeverity(event.target.value)}
                     />
-                    <label>{result.display}</label>
+                    <label>&nbsp;&nbsp;{result.display}</label>
                   </div>
                 ))}
               </label>
@@ -217,6 +217,7 @@ export default function CreateAllergies(props: PatientUuidProps) {
     );
   }
 }
-type PatientUuidProps = {
+type AddAllergyProps = {
   patientUuid: string;
+  addAllergy(allergy: any): void;
 };
